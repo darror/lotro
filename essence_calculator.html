@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>Lotro Stats to Essence Value Calculator</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header">
+			<!-- Logo -->
+			<h1><a href="index.html" id="logo">Lotro Utilities</a></h1>
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li class="current"><a href="essence_calculator.html">Essence Value Calculator</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<!-- Main -->
+		<section>
+			<div>
+				<div>
+
+					<!-- Content -->
+
+					<article>
+						<header>
+							<h2>EV Calculator</h2>
+						</header>
+						<p>Select Class
+							<select id="lotro_class">
+							</select>
+						</p>
+						<p>Enter stats for calculation:
+							<input type="button" id="btnAdd" value="Add Rows below" />
+						</p>
+						<hr />
+						<table id="tblContainer" border="0" cellpadding="5" cellspacing="5"></table>
+						<input type="button" id="btnCalculate" value="Calculate EV" />
+						<h3 id="ev_output_header">Essence value is: </h3>
+						<p>Breakdown</p>
+						<div>
+							<textarea id="breakdown">
+						</textarea>
+						</div>
+
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<div id="footer">
+			<div>
+				<div>
+					<section>
+						<h3>Footer</h3>
+						<ul>
+							<li><a href="#">Mattis et quis rutrum</a></li>
+						</ul>
+					</section>
+				</div>
+			</div>
+
+			<!-- Icons -->
+			<ul class="icons">
+				<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+			</ul>
+
+			<!-- Copyright -->
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; All rights reserved</li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.js"
+		integrity="sha512-VcwFAndRWOHd2GciF0dxUnsMlQGvIWMzKaOECoZT/xvKE3B6Lsow+xtuoi+fI/hBKF2F05mgLcynmICdvI4a4g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script type="text/javascript">
+		"use strict";
+		let result_csv;
+		let result_stats;
+		let json_primary_to_secondary;
+		const tblContainer = document.getElementById("tblContainer");
+		const btnAdd = document.getElementById("btnAdd");
+		const btnCalculate = document.getElementById("btnCalculate");
+		function make_option_from_csv_array(row_object, lookup_name) {
+			let option = document.createElement("OPTION");
+			option.innerHTML = row_object[lookup_name];
+			option.value = row_object[lookup_name];
+			return option;
+		}
+		Papa.parse("./data/classes.csv", {
+			download: true,
+			header: true,
+			dynamicTyping: true,
+			complete: function (results) {
+				result_csv = results.data;
+				console.log("classes csv received.");
+				const classContainer = document.getElementById("lotro_class");
+				result_csv.map((row) => make_option_from_csv_array(row, "class")).forEach(option => {
+					classContainer.options.add(option);
+				});
+			}
+		});
+
+		Papa.parse("./data/stats.csv", {
+			download: true,
+			header: true,
+			dynamicTyping: true,
+			complete: function (results) {
+				result_stats = results.data;
+				console.log("stats csv received.");
+				AddDropDownList(result_stats, "stat", tblContainer);
+			}
+		});
+
+		fetch("./data/primary_to_secondary.json")
+			.then(res => res.json())
+			.then(data => {
+				json_primary_to_secondary = data;
+				return data;
+			});
+
+		function AddDropDownList(obj_array, lookup_name, table_container_element) {
+			//this function has sideeffects
+			//Create a DropDownList element.
+			let ddlstats = document.createElement("SELECT");
+			let options = obj_array.map((row) => make_option_from_csv_array(row, lookup_name));
+			if (tblContainer.rows.length < options.length) {
+				options[tblContainer.rows.length].selected = true;
+			}
+			//Add the Options to the DropDownList.
+			options.forEach(option => {
+				ddlstats.options.add(option);
+			});
+
+			//Add the Table row.
+			const row = tblContainer.insertRow(-1);
+
+			//Add the DropDownList to Table Row.
+			let cell = row.insertCell(-1);
+			cell.appendChild(ddlstats);
+			//Create the field for value to input.
+			const statValue = document.createElement("INPUT");
+			statValue.value = 0;
+			//Add the field to table row.
+			cell = row.insertCell(-1);
+			cell.appendChild(statValue);
+			//Create a Remove Button.
+			const btnRemove = document.createElement("INPUT");
+			btnRemove.value = "Remove";
+			btnRemove.type = "button";
+			btnRemove.onclick = function () {
+				//Determine the reference of the Row using the Button.
+				const row = btnRemove.parentNode.parentNode;
+
+				//Delete the Table row using its Index.
+				tblContainer.deleteRow(row.rowIndex);
+			};
+
+			//Add the Remove Buttton to Table Row.
+			cell = row.insertCell(-1);
+			cell.appendChild(btnRemove);
+		}
+		btnAdd.addEventListener("click", (event) => { AddDropDownList(result_stats, "stat", tblContainer); });
+		let use_vitality = true;
+
+		function Calculate() {
+
+			const classContainer = document.getElementById("lotro_class");
+			const current_class = classContainer.value;
+			const tblContainer = document.getElementById("tblContainer");
+			const input_stats = new Map(Array.from(tblContainer.rows).map((row) => {
+				return [row.cells.item(0).children[0].value, parseInt(row.cells.item(1).children[0].value)]
+			}))
+			let intermediate_stats = new Map();
+			for (const [key, value] of input_stats) {
+				if ((key == "Vitality") && (use_vitality == true)) {
+					intermediate_stats.set(key, (intermediate_stats.get(key) ?? 0) + value);
+				}
+				else if (key in json_primary_to_secondary[current_class]) {
+					for (const [inner_key, inner_value] of Object.entries(json_primary_to_secondary[current_class][key])) {
+						// sum the original value and product of primary attribute and it's corresponding secondary attributes after conversion
+						intermediate_stats.set(inner_key, (intermediate_stats.get(inner_key) ?? 0) + (value * inner_value));
+					}
+				}
+				else {
+					intermediate_stats.set(key, (intermediate_stats.get(key) ?? 0) + value);
+				}
+			}
+			// filter to only keep selected stats
+			let intermediate_stats_filtered = intermediate_stats;
+			console.log(intermediate_stats_filtered);
+			let ev_final = 0;
+			let ev_dict = new Map(result_stats.map((x) => [x["stat"], x["essence_value"]]));
+			for (const [key, value] of intermediate_stats_filtered) {
+				if (ev_dict.get(key) === null) continue;
+				ev_final = ev_final + value / ev_dict.get(key);
+			}
+			console.log(ev_final);
+			const ev_output_header = document.getElementById("ev_output_header");
+			ev_output_header.textContent = "Essence value is: " + ev_final;
+			const breakdown_textarea = document.getElementById("breakdown");
+			breakdown_textarea.textContent = JSON.stringify(Object.fromEntries(intermediate_stats_filtered), null, 2);
+		}
+		btnCalculate.addEventListener("click", Calculate);
+	</script>
+</body>
+
+</html>

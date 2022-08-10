@@ -1,0 +1,453 @@
+{
+  "Beorning": {
+    "Might": {
+      "Physical Mastery": 2.5,
+      "Tactical Mastery": 2.5,
+      "Critical Rating": 1.0,
+      "Block": 2.0,
+      "Parry": 3.0,
+      "Evade": 1.0,
+      "Physical Mitigation": 0.0,
+      "Finesse": 0.0
+    },
+    "Agility": {
+      "Physical Mastery": 2.0,
+      "Critical Rating": 1.0,
+      "Parry": 0.0,
+      "Evade": 2.0
+    },
+    "Vitality": {
+      "Morale": 4.8,
+      "Tactical Mitigation": 0.0,
+      "Block": 0.0,
+      "Resistance": 1.0,
+      "Non-Combat Morale Regeneration": 7.2
+    },
+    "Will": {
+      "Tactical Mastery": 2.0,
+      "Finesse": 0.0,
+      "Tactical Mitigation": 1.0,
+      "Resistance": 1.0,
+      "Evade": 1.0
+    },
+    "Fate": {
+      "Critical Rating": 2.5,
+      "Finesse": 0.5,
+      "Tactical Mitigation": 2.0,
+      "Resistance": 1.0,
+      "In-Combat Morale Regeneration": 3.0,
+      "In-Combat Power Regeneration": 0.0,
+      "Non-Combat Power Regeneration": 0.0
+    }
+  },
+  "Brawler": {
+    "Might": {
+      "Physical Mastery": 3.0,
+      "Tactical Mastery": 0.0,
+      "Critical Rating": 0.0,
+      "Block": 0.0,
+      "Parry": 2.0,
+      "Evade": 3.0,
+      "Physical Mitigation": 0.0,
+      "Finesse": 1.0
+    },
+    "Agility": {
+      "Physical Mastery": 0.0,
+      "Critical Rating": 0.0,
+      "Parry": 2.0,
+      "Evade": 3.0
+    },
+    "Vitality": {
+      "Morale": 5.0,
+      "Tactical Mitigation": 0.0,
+      "Block": 0.0,
+      "Resistance": 1.0,
+      "Non-Combat Morale Regeneration": 7.2
+    },
+    "Will": {
+      "Tactical Mastery": 1.0,
+      "Finesse": 0.0,
+      "Tactical Mitigation": 2.0,
+      "Resistance": 1.0,
+      "Evade": 0.0
+    },
+    "Fate": {
+      "Critical Rating": 2.5,
+      "Finesse": 1.0,
+      "Tactical Mitigation": 1.0,
+      "Resistance": 1.0,
+      "In-Combat Morale Regeneration": 1.5,
+      "In-Combat Power Regeneration": 3.56,
+      "Non-Combat Power Regeneration": 24.0
+    }
+  },
+  "Burglar": {
+    "Might": {
+      "Physical Mastery": 0.0,
+      "Tactical Mastery": 0.0,
+      "Critical Rating": 0.0,
+      "Block": 3.0,
+      "Parry": 2.0,
+      "Evade": 0.0,
+      "Physical Mitigation": 0.0,
+      "Finesse": 0.0
+    },
+    "Agility": {
+      "Physical Mastery": 3.0,
+      "Critical Rating": 1.0,
+      "Parry": 2.0,
+      "Evade": 3.0
+    },
+    "Vitality": {
+      "Morale": 4.5,
+      "Tactical Mitigation": 0.0,
+      "Block": 0.0,
+      "Resistance": 1.0,
+      "Non-Combat Morale Regeneration": 7.2
+    },
+    "Will": {
+      "Tactical Mastery": 1.0,
+      "Finesse": 0.0,
+      "Tactical Mitigation": 1.0,
+      "Resistance": 2.0,
+      "Evade": 0.0
+    },
+    "Fate": {
+      "Critical Rating": 2.5,
+      "Finesse": 1.0,
+      "Tactical Mitigation": 1.0,
+      "Resistance": 1.0,
+      "In-Combat Morale Regeneration": 1.5,
+      "In-Combat Power Regeneration": 1.71,
+      "Non-Combat Power Regeneration": 24.0
+    }
+  },
+  "Captain": {
+    "Might": {
+      "Physical Mastery": 2.5,
+      "Tactical Mastery": 2.5,
+      "Critical Rating": 0.0,
+      "Block": 3.0,
+      "Parry": 2.0,
+      "Evade": 0.0,
+      "Physical Mitigation": 0.0,
+      "Finesse": 0.0
+    },
+    "Agility": {
+      "Physical Mastery": 0.0,
+      "Critical Rating": 1.0,
+      "Parry": 2.0,
+      "Evade": 3.0
+    },
+    "Vitality": {
+      "Morale": 4.5,
+      "Tactical Mitigation": 0.0,
+      "Block": 0.0,
+      "Resistance": 2.0,
+      "Non-Combat Morale Regeneration": 7.2
+    },
+    "Will": {
+      "Tactical Mastery": 0.0,
+      "Finesse": 0.0,
+      "Tactical Mitigation": 1.0,
+      "Resistance": 2.0,
+      "Evade": 0.0
+    },
+    "Fate": {
+      "Critical Rating": 2.5,
+      "Finesse": 1.0,
+      "Tactical Mitigation": 1.0,
+      "Resistance": 0.0,
+      "In-Combat Morale Regeneration": 1.5,
+      "In-Combat Power Regeneration": 1.71,
+      "Non-Combat Power Regeneration": 24.0
+    }
+  },
+  "Champion": {
+    "Might": {
+      "Physical Mastery": 3.0,
+      "Tactical Mastery": 0.0,
+      "Critical Rating": 1.0,
+      "Block": 3.0,
+      "Parry": 2.0,
+      "Evade": 2.0,
+      "Physical Mitigation": 1.0,
+      "Finesse": 0.0
+    },
+    "Agility": {
+      "Physical Mastery": 0.0,
+      "Critical Rating": 1.0,
+      "Parry": 2.0,
+      "Evade": 3.0
+    },
+    "Vitality": {
+      "Morale": 4.5,
+      "Tactical Mitigation": 0.0,
+      "Block": 1.0,
+      "Resistance": 1.0,
+      "Non-Combat Morale Regeneration": 7.2
+    },
+    "Will": {
+      "Tactical Mastery": 1.0,
+      "Finesse": 0.0,
+      "Tactical Mitigation": 1.0,
+      "Resistance": 2.0,
+      "Evade": 0.0
+    },
+    "Fate": {
+      "Critical Rating": 2.5,
+      "Finesse": 1.0,
+      "Tactical Mitigation": 1.0,
+      "Resistance": 1.0,
+      "In-Combat Morale Regeneration": 1.5,
+      "In-Combat Power Regeneration": 1.71,
+      "Non-Combat Power Regeneration": 24.0
+    }
+  },
+  "Guardian": {
+    "Might": {
+      "Physical Mastery": 3.0,
+      "Tactical Mastery": 0.0,
+      "Critical Rating": 0.0,
+      "Block": 3.0,
+      "Parry": 2.0,
+      "Evade": 0.0,
+      "Physical Mitigation": 0.0,
+      "Finesse": 0.0
+    },
+    "Agility": {
+      "Physical Mastery": 0.0,
+      "Critical Rating": 1.0,
+      "Parry": 2.0,
+      "Evade": 3.0
+    },
+    "Vitality": {
+      "Morale": 4.8,
+      "Tactical Mitigation": 0.0,
+      "Block": 0.0,
+      "Resistance": 1.0,
+      "Non-Combat Morale Regeneration": 7.2
+    },
+    "Will": {
+      "Tactical Mastery": 1.0,
+      "Finesse": 0.0,
+      "Tactical Mitigation": 1.0,
+      "Resistance": 2.0,
+      "Evade": 0.0
+    },
+    "Fate": {
+      "Critical Rating": 2.5,
+      "Finesse": 1.0,
+      "Tactical Mitigation": 1.0,
+      "Resistance": 1.0,
+      "In-Combat Morale Regeneration": 1.5,
+      "In-Combat Power Regeneration": 1.71,
+      "Non-Combat Power Regeneration": 24.0
+    }
+  },
+  "Hunter": {
+    "Might": {
+      "Physical Mastery": 0.0,
+      "Tactical Mastery": 0.0,
+      "Critical Rating": 0.0,
+      "Block": 3.0,
+      "Parry": 2.0,
+      "Evade": 0.0,
+      "Physical Mitigation": 0.0,
+      "Finesse": 0.0
+    },
+    "Agility": {
+      "Physical Mastery": 3.0,
+      "Critical Rating": 1.0,
+      "Parry": 2.0,
+      "Evade": 3.0
+    },
+    "Vitality": {
+      "Morale": 4.0,
+      "Tactical Mitigation": 1.0,
+      "Block": 0.0,
+      "Resistance": 1.0,
+      "Non-Combat Morale Regeneration": 7.2
+    },
+    "Will": {
+      "Tactical Mastery": 1.0,
+      "Finesse": 0.0,
+      "Tactical Mitigation": 1.0,
+      "Resistance": 2.0,
+      "Evade": 0.0
+    },
+    "Fate": {
+      "Critical Rating": 2.5,
+      "Finesse": 1.0,
+      "Tactical Mitigation": 1.0,
+      "Resistance": 1.0,
+      "In-Combat Morale Regeneration": 1.5,
+      "In-Combat Power Regeneration": 1.71,
+      "Non-Combat Power Regeneration": 22.0
+    }
+  },
+  "Lore-master": {
+    "Might": {
+      "Physical Mastery": 0.0,
+      "Tactical Mastery": 0.0,
+      "Critical Rating": 0.0,
+      "Block": 3.0,
+      "Parry": 2.0,
+      "Evade": 0.0,
+      "Physical Mitigation": 0.0,
+      "Finesse": 0.0
+    },
+    "Agility": {
+      "Physical Mastery": 0.0,
+      "Critical Rating": 1.0,
+      "Parry": 2.0,
+      "Evade": 3.0
+    },
+    "Vitality": {
+      "Morale": 4.0,
+      "Tactical Mitigation": 1.0,
+      "Block": 0.0,
+      "Resistance": 1.0,
+      "Non-Combat Morale Regeneration": 7.2
+    },
+    "Will": {
+      "Tactical Mastery": 3.0,
+      "Finesse": 1.0,
+      "Tactical Mitigation": 1.0,
+      "Resistance": 2.0,
+      "Evade": 1.0
+    },
+    "Fate": {
+      "Critical Rating": 2.5,
+      "Finesse": 0.0,
+      "Tactical Mitigation": 1.0,
+      "Resistance": 1.0,
+      "In-Combat Morale Regeneration": 1.5,
+      "In-Combat Power Regeneration": 1.71,
+      "Non-Combat Power Regeneration": 24.0
+    }
+  },
+  "Minstrel": {
+    "Might": {
+      "Physical Mastery": 0.0,
+      "Tactical Mastery": 0.0,
+      "Critical Rating": 0.0,
+      "Block": 3.0,
+      "Parry": 2.0,
+      "Evade": 0.0,
+      "Physical Mitigation": 0.0,
+      "Finesse": 0.0
+    },
+    "Agility": {
+      "Physical Mastery": 0.0,
+      "Critical Rating": 1.0,
+      "Parry": 2.0,
+      "Evade": 3.0
+    },
+    "Vitality": {
+      "Morale": 4.0,
+      "Tactical Mitigation": 1.0,
+      "Block": 0.0,
+      "Resistance": 1.0,
+      "Non-Combat Morale Regeneration": 7.2
+    },
+    "Will": {
+      "Tactical Mastery": 3.0,
+      "Finesse": 1.0,
+      "Tactical Mitigation": 1.0,
+      "Resistance": 2.0,
+      "Evade": 1.0
+    },
+    "Fate": {
+      "Critical Rating": 2.5,
+      "Finesse": 0.0,
+      "Tactical Mitigation": 1.0,
+      "Resistance": 1.0,
+      "In-Combat Morale Regeneration": 1.5,
+      "In-Combat Power Regeneration": 1.71,
+      "Non-Combat Power Regeneration": 24.0
+    }
+  },
+  "Rune-keeper": {
+    "Might": {
+      "Physical Mastery": 0.0,
+      "Tactical Mastery": 0.0,
+      "Critical Rating": 0.0,
+      "Block": 3.0,
+      "Parry": 2.0,
+      "Evade": 0.0,
+      "Physical Mitigation": 0.0,
+      "Finesse": 0.0
+    },
+    "Agility": {
+      "Physical Mastery": 0.0,
+      "Critical Rating": 1.0,
+      "Parry": 2.0,
+      "Evade": 3.0
+    },
+    "Vitality": {
+      "Morale": 4.0,
+      "Tactical Mitigation": 1.0,
+      "Block": 0.0,
+      "Resistance": 1.0,
+      "Non-Combat Morale Regeneration": 7.2
+    },
+    "Will": {
+      "Tactical Mastery": 3.0,
+      "Finesse": 1.0,
+      "Tactical Mitigation": 1.0,
+      "Resistance": 2.0,
+      "Evade": 1.0
+    },
+    "Fate": {
+      "Critical Rating": 2.5,
+      "Finesse": 0.0,
+      "Tactical Mitigation": 1.0,
+      "Resistance": 1.0,
+      "In-Combat Morale Regeneration": 1.5,
+      "In-Combat Power Regeneration": 1.71,
+      "Non-Combat Power Regeneration": 24.0
+    }
+  },
+  "Warden ": {
+    "Might": {
+      "Physical Mastery": 2.0,
+      "Tactical Mastery": 0.0,
+      "Critical Rating": 0.0,
+      "Block": 3.0,
+      "Parry": 2.0,
+      "Evade": 0.0,
+      "Physical Mitigation": 0.0,
+      "Finesse": 0.0
+    },
+    "Agility": {
+      "Physical Mastery": 3.0,
+      "Critical Rating": 1.0,
+      "Parry": 2.0,
+      "Evade": 3.0
+    },
+    "Vitality": {
+      "Morale": 4.8,
+      "Tactical Mitigation": 0.0,
+      "Block": 0.0,
+      "Resistance": 1.0,
+      "Non-Combat Morale Regeneration": 7.2
+    },
+    "Will": {
+      "Tactical Mastery": 0.0,
+      "Finesse": 0.0,
+      "Tactical Mitigation": 1.0,
+      "Resistance": 2.0,
+      "Evade": 0.0
+    },
+    "Fate": {
+      "Critical Rating": 2.5,
+      "Finesse": 1.0,
+      "Tactical Mitigation": 1.0,
+      "Resistance": 1.0,
+      "In-Combat Morale Regeneration": 1.5,
+      "In-Combat Power Regeneration": 1.71,
+      "Non-Combat Power Regeneration": 24.0
+    }
+  }
+}

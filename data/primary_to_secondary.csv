@@ -1,0 +1,34 @@
+1 point in,grants X points in,Beorning,Brawler,Burglar,Captain,Champion,Guardian,Hunter,Lore-master,Minstrel,Rune-keeper,Warden 
+Might,Physical Mastery Rating,2.5,3,0,2.5,3,3,0,0,0,0,2
+,Tactical Mastery Rating,2.5,0,0,2.5,0,0,0,0,0,0,0
+,Critical Rating,1,0,0,0,1,0,0,0,0,0,0
+,Block Rating,2,0,3,3,3,3,3,3,3,3,3
+,Parry Rating,3,2,2,2,2,2,2,2,2,2,2
+,Evade Rating,1,3,0,0,2,0,0,0,0,0,0
+,Physical Mitigation,0,0,0,0,1,0,0,0,0,0,0
+,Finesse,0,1,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,
+Agility,Physical Mastery Rating,2,0,3,0,0,0,3,0,0,0,3
+,Critical Rating,1,0,1,1,1,1,1,1,1,1,1
+,Parry Rating,0,2,2,2,2,2,2,2,2,2,2
+,Evade Rating,2,3,3,3,3,3,3,3,3,3,3
+,,,,,,,,,,,,
+Vitality,Maximum Morale,4.8,5,4.5,4.5,4.5,4.8,4,4,4,4,4.8
+,Tactical Mitigation,0,0,0,0,0,0,1,1,1,1,0
+,Block Rating,0,0,0,0,1,0,0,0,0,0,0
+,Resistance Rating,1,1,1,2,1,1,1,1,1,1,1
+,Non-Combat Morale Regeneration,7.2,7.2,7.2,7.2,7.2,7.2,7.2,7.2,7.2,7.2,7.2
+,,,,,,,,,,,,
+Will,Tactical Mastery Rating,2,1,1,0,1,1,1,3,3,3,0
+,Finesse Rating,0,0,0,0,0,0,0,1,1,1,0
+,Tactical Mitigation,1,2,1,1,1,1,1,1,1,1,1
+,Resistance Rating,1,1,2,2,2,2,2,2,2,2,2
+,Evade Rating,1,0,0,0,0,0,0,1,1,1,0
+,,,,,,,,,,,,
+Fate,Critical Rating,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5
+,Finesse Rating,0.5,1,1,1,1,1,1,0,0,0,1
+,Tactical Mitigation,2,1,1,1,1,1,1,1,1,1,1
+,Resistance Rating,1,1,1,0,1,1,1,1,1,1,1
+,In-Combat Morale Regeneration,3,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5
+,In-Combat Power Regeneration,0,3.56,1.71,1.71,1.71,1.71,1.71,1.71,1.71,1.71,1.71
+,Non-Combat Power Regeneration,0,24,24,24,24,24,22,24,24,24,24
